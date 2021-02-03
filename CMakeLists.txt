@@ -18,5 +18,7 @@ endif()
 message(${SRCDIR})
 #include_directories(${SRCDIR}/run)
 include_directories(${SRCDIR}/utils/cxxurl)
+include_directories(${CURL_INCLUDE_DIR})
 
 add_executable(post ${SRCDIR}/run/check_post.cpp)
+target_link_libraries(post  ${CURL_LIBRARY})
